@@ -4,10 +4,11 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            steps {
-                echo 'Source code checkout completed'
-            }
-        }
+    steps {
+        git branch: 'master',
+            url: 'https://github.com/shubhangisirsat9219/Playwright2026.git'
+         }
+      }
 
         stage('Build') {
             steps {
