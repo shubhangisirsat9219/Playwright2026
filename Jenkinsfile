@@ -24,7 +24,7 @@ pipeline {
         stage('Test') {
            steps {
             echo 'Testing application...'
-
+            sh 'exit 1'
            sh 'echo "Job Name: $JOB_NAME"'
            sh 'echo "Build Number: $BUILD_NUMBER"'
            sh 'echo "Workspace: $WORKSPACE"'
