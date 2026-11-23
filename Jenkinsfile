@@ -10,11 +10,16 @@ pipeline {
          }
       }
 
-        stage('Build') {
-            steps {
-                echo 'Building application...'
-            }
-        }
+        stage('Build Information') {
+          steps {
+               echo 'Displaying Jenkins Build Information'
+
+               sh 'date'
+               sh 'whoami'
+               sh 'hostname'
+               sh 'git log -1 --oneline'
+                }
+       }
 
         stage('Test') {
            steps {
