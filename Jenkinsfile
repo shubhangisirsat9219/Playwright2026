@@ -17,10 +17,12 @@ pipeline {
         }
 
         stage('Test') {
-            steps {
-                echo 'Testing application...'
-            }
-        }
+          steps {
+             echo 'Testing application...'
+             sh 'pwd'
+             sh 'ls -la'
+          }
+       }
 
         stage('Deploy') {
             steps {
