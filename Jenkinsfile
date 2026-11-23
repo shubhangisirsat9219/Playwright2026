@@ -17,12 +17,17 @@ pipeline {
         }
 
         stage('Test') {
-          steps {
-             echo 'Testing application I have changed something...'
-             sh 'pwd'
-             sh 'ls -la'
-          }
-       }
+           steps {
+            echo 'Testing application...'
+
+           sh 'echo "Job Name: $JOB_NAME"'
+           sh 'echo "Build Number: $BUILD_NUMBER"'
+           sh 'echo "Workspace: $WORKSPACE"'
+
+           sh 'echo "Checking repository files..."'
+           sh 'ls -la'
+            }
+       } 
 
         stage('Deploy') {
             steps {
