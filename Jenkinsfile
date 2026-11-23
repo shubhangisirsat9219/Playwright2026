@@ -18,7 +18,7 @@ pipeline {
 
         stage('Test') {
           steps {
-             echo 'Testing application...'
+             echo 'Testing application I have changed something...'
              sh 'pwd'
              sh 'ls -la'
           }
