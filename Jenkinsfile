@@ -20,7 +20,7 @@ pipeline {
 
         stage('Build Information') {
             steps {
-                echo 'Displaying Jenkins Build Information newly'
+                echo 'Displaying Jenkins Build Information'
 
                 sh 'date'
                 sh 'whoami'
