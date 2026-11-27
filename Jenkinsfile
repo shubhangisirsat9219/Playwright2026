@@ -6,7 +6,7 @@ pipeline {
         choice(
             name: 'ENVIRONMENT',
             choices: ['Dev', 'QA', 'Production'],
-            description: 'Select deployment environment new'
+            description: 'Select deployment environment'
         )
     }
 
